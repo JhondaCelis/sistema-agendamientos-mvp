@@ -1,9 +1,17 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import AdminPage from './pages/AdminPage'
+import HomePage from './pages/HomePage'
+import LoginPage from './pages/LoginPage'
+
 function App() {
   return (
-    <main>
-      <h1>Sistema de Agendamientos</h1>
-      <p>Piloto - Barbería</p>
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/admin" element={<AdminPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
